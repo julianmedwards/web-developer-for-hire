@@ -1,3 +1,19 @@
+/* Index 
+        1. Fonts & Text
+        2. Colors
+        3. Links & Buttons
+        4. Cards
+        5. Page Layout / Page-Specific Rules
+*/
+
+/* Fonts & Text */
+
+* {
+    font-family: 'Ubuntu', sans-serif;
+    line-height: 1.5;
+    /* color: #141c3a; */
+}
+
 /* Colors */
 .primary-bg {
     background-color: #dd1c1a;
@@ -16,19 +32,73 @@
     color: #141c3a;
 }
 
-/* Fonts & Text */
-
-* {
-    font-family: 'Ubuntu', sans-serif;
-}
-
 p,
 li {
     font-size: 1.2em;
     font-weight: 300;
 }
 
-/* Layout */
+/* Links & Buttons */
+.link {
+    color: #dd1c1a;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.link:hover {
+    color: #bb0805;
+}
+
+.link-reverse {
+    color: #141c3a;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.link-reverse:hover {
+    color: #dd1c1a;
+    transition: 0.25s;
+}
+
+.button {
+    color: #dd1c1a;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 0.6em 1em 0.6em 1em;
+    border: 2px solid #dd1c1a;
+    border-radius: 20px;
+}
+
+.button:hover {
+    background-color: #dd1c1a;
+    border-color: #dd1c1a;
+    color: white;
+    transition: 0.25s;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.hover-unhide:hover .hidden,
+.hover-unhide :hover {
+    opacity: 1;
+    transition: 0.25s;
+}
+
+/* Cards */
+.card {
+    text-align: center;
+    display: inline-block;
+    padding: 10px;
+}
+
+.card > ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Page Layout / Page-Specific Rules */
 body {
     margin: 0;
     height: 100%;
@@ -45,35 +115,36 @@ body {
     position: absolute;
     top: 30px;
     left: 20px;
+    margin: 0 0.5em 0 0.5em;
 }
 
-#navbutton {
+#navlinks {
     position: absolute;
     top: 30px;
     right: 20px;
 }
 
-.button {
-    color: #dd1c1a;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-.button > div {
-    padding: 0.6em 1em 0.6em 1em;
-    border-color: #dd1c1a;
-    border: 2px solid;
-    border-radius: 20px;
-}
-
-.button :hover {
-    background-color: #dd1c1a;
-    color: white;
+#navlinks > a {
+    display: inline-block;
+    margin: 0 0.5em 0 0.5em;
 }
 
 /* Removes whitespace around inline block elements, e.g. images. */
 .remove-whitespace {
     font-size: 0;
+}
+
+#intro {
+    margin: auto;
+    width: fit-content;
+    text-align: center;
+    font-size: 1.3em;
+    word-spacing: 0.1em;
+}
+
+#introblurb {
+    margin: 0 0 2em 0;
+    font-size: 1em;
 }
 
 #bio {
@@ -90,26 +161,15 @@ body {
     background-color: white;
     position: relative;
     bottom: 8em;
-    margin: 4% 8% 10em 8%;
+    margin: 4% 4% 0 4%;
     border-radius: 16px;
-    border: 1px solid #e4e4e4;
-    box-shadow: 1.5px 1.5px 2px #ededed;
+    border: 1px solid #ededed;
+    box-shadow: 0px 3px 2px #ededed;
 }
 
 #skill-padding {
     padding: 4%;
     display: flex;
-}
-
-.card {
-    text-align: center;
-    display: inline-block;
-    padding: 10px;
-}
-
-.card > ul {
-    list-style-type: none;
-    padding: 0;
 }
 
 /* #skills-cards > .card { */
@@ -119,6 +179,55 @@ body {
 
 #center-card {
     /* width: calc(32% - 2px); */
-    border-right: 1px solid #e4e4e4;
-    border-left: 1px solid #e4e4e4;
+    border-right: 1px solid #ededed;
+    border-left: 1px solid #ededed;
+}
+
+#recent-work {
+    text-align: center;
+}
+
+.project-card {
+    height: 215px;
+    width: 320px;
+    margin: 1em;
+    border-radius: 15px;
+}
+
+.project-bttn {
+    position: relative;
+    color: white;
+}
+
+.project-txt {
+    color: white;
+    margin: 2em 0 2em 0;
+}
+
+#meta-card {
+    background-image: url('img/thissite.png');
+    background-color: #141c3a;
+}
+
+#lin-card {
+    background-image: url('img/linuxterminal.png');
+    background-position: right;
+    background-color: #141c3a;
+}
+
+#win-card {
+    background-image: url('img/windowsterminal.png');
+    background-color: #141c3a;
+    background-position: center;
+}
+
+#meta-card:hover,
+#lin-card:hover,
+#win-card:hover {
+    background-image: none;
+    transition: 1s;
+}
+
+#collabs {
+    text-align: center;
 }
