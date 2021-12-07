@@ -4,7 +4,6 @@
   <head>
     <title>Web Developer for Hire</title>
     <link rel="stylesheet" href="styles.css" />
-
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,29 +18,34 @@
     />
   </head>
   <body>
-    <!-- Navbar -->
-    <div id="navbar">
-      <a id="navlogo" href="#"
-        ><img src="https://via.placeholder.com/60x60" />
-      </a>
-      <div id="navlinks">
-        <a class="link-reverse" href="#mentorship"><p>Mentorship</p></a>
-        <a class="button" href="#contact">Say Hello</a>
+    <!-- Initial Screen View -->
+    <div id="init-view">
+      <!-- Navbar -->
+      <div id="navbar">
+        <a id="navlogo" href="#"
+          ><img src="https://via.placeholder.com/60x60" />
+        </a>
+        <div id="navlinks">
+          <a class="link-reverse" href="#mentorship"><p>Mentorship</p></a>
+          <a class="button" href="#contact">Say Hello</a>
+        </div>
       </div>
-    </div>
-    <!-- Intro Header -->
-    <div id="intro">
-      <h1>Web Developer for Hire</h1>
-      <p id="introblurb">I design and code webapps from front to back.</p>
-      <img src="https://via.placeholder.com/200x200" />
-      <div class="remove-whitespace">
-        <img src="img/pc-img2.0.svg" />
+      <!-- Intro Header -->
+      <div>
+        <h1 id="page-title" class="title">Web Developer for Hire</h1>
+        <p id="page-sub" class="subtitle">
+          I design and code webapps from front to back.
+        </p>
+        <img src="https://via.placeholder.com/200x200" />
+        <div id="computer-img">
+          <img src="img/pc-img2.0.svg" />
+        </div>
       </div>
     </div>
     <!-- Bio -->
     <div class="bio primary-bg">
-      <div class="textblock">
-        <h1>Hi, I'm Julian. Nice to meet you.</h1>
+      <div>
+        <h1 class="title">Hi, I'm Julian. Nice to meet you.</h1>
         <p>
           Since beginning my journey as a freelance designer nearly 10 years
           ago, I've done remote work for agencies, consulted for startups, and
@@ -53,7 +57,7 @@
       </div>
     </div>
     <!-- Skills Overview -->
-    <div class="card-bg overlapping">
+    <div class="section card-bg overlapping">
       <div class="card-format">
         <img src="https://via.placeholder.com/60x60" />
         <h2>Front-end Developer</h2>
@@ -113,13 +117,13 @@
       </div>
     </div>
     <!-- Recent Work -->
-    <div id="recent-work">
-      <h2>My Recent Work</h2>
-      <p>
+    <div id="recent-work" class="section">
+      <h1 class="title">My Recent Work</h1>
+      <p class="subtitle">
         Here are a few personal projects I've worked on recently. Want to hear
         more? <a class="link" href="#email"><span>Email me.</span></a>
       </p>
-      <div>
+      <div class="showcase">
         <div>
           <div id="meta-card" class="card-format project-card hover-unhide">
             <p class="project-txt hidden">
@@ -178,9 +182,11 @@
     </div>
     <hr />
     <!-- Collabs -->
-    <div id="collabs">
-      <h2>I'm proud to have collabed:</h2>
-      <div class="grid-container">
+    <div id="collabs" class="section">
+      <h1 class="title">
+        I'm proud to have collaborated with some awesome companies:
+      </h1>
+      <div class="showcase grid-container">
         <div>
           <img src="https://via.placeholder.com/280x100" />
         </div>
@@ -208,9 +214,9 @@
       </div>
     </div>
     <!-- Startups -->
-    <div class="bio primary-bg">
-      <div class="textblock">
-        <h2>My Startup Projects</h2>
+    <div class="section bio primary-bg">
+      <div>
+        <h1 class="title">My Startup Projects</h1>
         <p>
           I'm a bit of a digital product junky. Over the years, I've used
           hundreds of web and mobile apps in different industries and verticals.
@@ -219,8 +225,7 @@
         </p>
       </div>
     </div>
-    <!-- Row 1 -->
-    <div class="overlapping">
+    <div class="section overlapping">
       <div class="card-bg card-format">
         <img src="https://via.placeholder.com/280x100" />
         <p>
@@ -245,7 +250,6 @@
         </p>
         <p><a href="#site" class="link">www.example.com</a></p>
       </div>
-      <!-- Row 2 -->
       <div class="card-bg card-format">
         <img src="https://via.placeholder.com/280x100" />
         <p>
@@ -272,9 +276,9 @@
       </div>
     </div>
     <!-- Contact Me -->
-    <div>
-      <h2 class="unbold">Interested in collaborating or investing?</h2>
-      <p>
+    <div class="section">
+      <h1 class="title unbold">Interested in collaborating or investing?</h1>
+      <p class="subtitle">
         I'm always open to discussing product design work or partnership
         opportunities.
       </p>
@@ -282,10 +286,12 @@
     </div>
     <hr />
     <!-- Testimonials -->
-    <div>
-      <h2>Testimonials</h2>
-      <p>People I've worked with have said some nice things...</p>
-      <div class="textblock">
+    <div class="section">
+      <h1 class="title">Testimonials</h1>
+      <p class="subtitle">
+        People I've worked with have said some nice things...
+      </p>
+      <div>
         <img src="https://via.placeholder.com/80x80" />
         <p>
           “Matt was a real pleasure to work with and we look forward to working
@@ -319,7 +325,9 @@
     <!-- Footer -->
     <div id="footer" class="primary-bg">
       <a href="#"><img src="https://via.placeholder.com/60x60" /> </a>
-      <p>Living, learning, & leveling up one day at at time.</p>
+      <p class="subtitle">
+        Living, learning, & leveling up one day at at time.
+      </p>
       <div>
         <a class="button footer-bttn" href="#twitter"
           ><svg
@@ -395,7 +403,7 @@
           </svg>
         </a>
       </div>
-      <p>Handcrafted by me &copy; 2021</p>
+      <p class="subtitle">Handcrafted by me &copy; 2021</p>
       <a id="to-top" href="#" class="button footer-bttn"
         ><svg
           xmlns="http://www.w3.org/2000/svg"
