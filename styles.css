@@ -4,7 +4,9 @@
         3. Spacing
         4. Links & Buttons
         5. Cards
-        6. Page-Specific Rules
+        6. Navbar
+        7. Grids
+        8. Tables
 */
 
 /* Fonts & Text */
@@ -13,17 +15,29 @@
     font-family: 'Ubuntu', sans-serif;
     line-height: 1.5;
     text-align: center;
-    /* color: #141c3a; */
 }
 
-/* h1 {
-    font-weight: 700;
-} */
+h1 {
+    font-size: 1.85em;
+}
 
 p,
 li {
     font-size: 1.2em;
     font-weight: 300;
+}
+
+.lg-txt {
+    font-size: 1.3em !important;
+    padding-left: 2em !important;
+    padding-right: 2em !important;
+}
+
+.auxiliary {
+    font-size: 1em;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-bottom: 1em;
 }
 
 .unbold {
@@ -55,12 +69,14 @@ li {
     color: white;
 }
 
-/* Unused
-.secondary-text {
-    color: #141c3a;
-} */
-
 /* Spacing */
+
+body {
+    position: relative;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
 
 .title {
     max-width: 600px;
@@ -68,34 +84,83 @@ li {
 }
 
 .subtitle {
-    margin-bottom: 4rem;
+    max-width: 800px;
+    margin: 0 auto 4rem auto;
 }
 
 .section {
     padding-bottom: 8rem;
 }
 
+.hr-spacer {
+    margin-bottom: 8rem;
+    border-bottom: 1px solid lightgray;
+}
+
 .bio {
     overflow: auto;
-    padding-bottom: 8rem;
+    padding-top: 4em;
+    padding-bottom: 14rem;
 }
 
 .showcase {
+    max-width: 1200px;
     margin-top: 4rem;
+    margin-left: auto;
+    margin-right: auto;
     padding-bottom: 5rem;
 }
 
 .overlapping {
-    height: 100%;
     position: relative;
-    bottom: 8rem;
-    margin: auto;
+    bottom: 10rem;
+    height: 100%;
     max-width: 1200px;
+    margin: auto !important;
     padding-bottom: 0;
+}
+
+.overlapping + .section > .title:first-child {
+    margin-top: 0;
+}
+
+.sq-logo {
+    height: 60px;
+    width: 60px;
+}
+
+.full-logo {
+    max-width: 100%;
+    max-height: 65px;
+}
+
+.avatar {
+    max-height: 100px;
+    max-width: 100px;
+    margin-bottom: 2em;
+    border-radius: 50%;
+}
+
+#header-avatar {
+    max-height: 200px;
+    max-width: 200px;
+    border-radius: 50%;
 }
 
 #computer-img {
     font-size: 0;
+}
+
+#footer {
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    padding-top: 10em;
+    color: darkgray;
+}
+
+#social-links {
+    margin: 3em auto;
 }
 
 @media (min-height: 840px) {
@@ -137,9 +202,9 @@ li {
     color: #dd1c1a;
     text-decoration: none;
     font-size: 18px;
-    padding: 0.6em 1em 0.6em 1em;
+    padding: 0.5em 1em;
     border: 2px solid #dd1c1a;
-    border-radius: 20px;
+    border-radius: 25px;
 }
 
 .button:hover {
@@ -156,11 +221,12 @@ li {
 
 .footer-bttn {
     color: white;
-    height: 1em;
-    width: 1em;
-    line-height: 1em;
-    padding: 0.7em;
-    margin: 1em;
+    height: 1rem;
+    width: 1rem;
+    line-height: 1rem;
+    font-size: 1rem;
+    padding: 0.7rem;
+    margin: auto 1rem;
     border-radius: 100%;
     border-color: darkgray;
 }
@@ -183,8 +249,8 @@ li {
 
 #to-top {
     position: relative;
-    left: 20em;
-    bottom: 8em;
+    left: 20rem;
+    bottom: 10rem;
 }
 
 /* Cards */
@@ -199,8 +265,9 @@ li {
 
 .card-format {
     display: inline-block;
-    padding: 40px;
+    vertical-align: top;
     width: 300px;
+    padding: 40px;
 }
 
 .card-format ul {
@@ -210,24 +277,46 @@ li {
 
 .project-card {
     height: 215px;
-    width: 320px;
-    margin: 1em;
     border-radius: 15px;
+    margin: 7px;
+}
+
+.project-txt {
+    color: white;
+    margin: 2em 0 2em 0;
 }
 
 #center-card {
     border-right: 1px solid #ededed;
     border-left: 1px solid #ededed;
+    height: 500px;
 }
 
-/* Page Layout / Page-Specific Rules */
-
-body {
-    position: relative;
-    margin: 0;
-    height: 100%;
-    width: 100%;
+.meta-card {
+    background-image: url('img/thissite.png');
+    background-color: #141c3a;
 }
+
+.lin-card {
+    background-image: url('img/linuxterminal.png');
+    background-position: right;
+    background-color: #141c3a;
+}
+
+.win-card {
+    background-image: url('img/windowsterminal.png');
+    background-color: #141c3a;
+    background-position: center;
+}
+
+.meta-card:hover,
+.lin-card:hover,
+.win-card:hover {
+    background-image: none;
+    transition: 1s;
+}
+
+/* Navbar */
 
 #navbar {
     height: 150px;
@@ -253,63 +342,35 @@ body {
     margin: 0 0.5em 0 0.5em;
 }
 
-.project-txt {
-    color: white;
-    margin: 2em 0 2em 0;
-}
-
-#meta-card {
-    background-image: url('img/thissite.png');
-    background-color: #141c3a;
-}
-
-#lin-card {
-    background-image: url('img/linuxterminal.png');
-    background-position: right;
-    background-color: #141c3a;
-}
-
-#win-card {
-    background-image: url('img/windowsterminal.png');
-    background-color: #141c3a;
-    background-position: center;
-}
-
-#meta-card:hover,
-#lin-card:hover,
-#win-card:hover {
-    background-image: none;
-    transition: 1s;
-}
+/* Grids */
 
 .grid-container {
     display: grid;
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
     justify-content: center;
-    /* grid-template-columns: 33.333% 33.333% 33.333%; */
-    grid-template-columns: 20% 20% 20% 20%;
-    grid-template-rows: 50% 50%;
+    grid-template-columns: repeat(4, 20%);
+    grid-template-rows: repeat(2, 50%);
+    column-gap: 5%;
+    row-gap: 25%;
 }
 
-#call-to-action {
-    position: absolute;
-    z-index: 1;
-    bottom: 430px;
-    width: 1200px;
-    left: 0;
-    right: 0;
-    margin: auto;
-    border-radius: 15px;
-}
+/* Tables */
 
 .cell {
     width: 33.333%;
     padding: 1.5em;
 }
 
-#footer {
-    position: relative;
-    z-index: 0;
-    overflow: hidden;
-    padding-top: 10em;
-    color: darkgray;
+#call-to-action {
+    position: absolute;
+    z-index: 1;
+    bottom: 415px;
+    width: 1200px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 15px;
+    box-shadow: 0px 1px 3px #141c3a;
 }
