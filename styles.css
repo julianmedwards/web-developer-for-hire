@@ -113,12 +113,8 @@ body {
     bottom: 10rem;
     height: 100%;
     max-width: 1200px;
-    margin: auto !important;
+    margin: auto auto -4rem auto !important;
     padding-bottom: 0;
-}
-
-.overlapping + .section > .title:first-child {
-    margin-top: 0;
 }
 
 .showcase {
