@@ -12,6 +12,10 @@
 
 /* Fonts & Text */
 
+body {
+    color: #222831;
+}
+
 * {
     font-family: 'Ubuntu', sans-serif;
     line-height: 1.5;
@@ -34,7 +38,7 @@ li {
     padding-right: 2em !important;
 }
 
-.auxiliary {
+.fine-txt {
     font-size: 1em;
     margin-block-start: 0;
     margin-block-end: 0;
@@ -45,12 +49,12 @@ li {
     font-weight: normal;
 }
 
-#page-title {
+#top-title {
     margin-top: 2rem;
     font-size: 3em;
 }
 
-#page-sub {
+#top-subtitle {
     font-size: 1.3em;
 }
 
@@ -61,12 +65,12 @@ li {
     color: white;
 }
 
-.primary-text {
+.primary-txt {
     color: #dd1c1a;
 }
 
 .secondary-bg {
-    background-color: #141c3a;
+    background-color: #222831;
     color: white;
 }
 
@@ -104,14 +108,6 @@ body {
     padding-bottom: 14rem;
 }
 
-.showcase {
-    max-width: 1200px;
-    margin-top: 4rem;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 5rem;
-}
-
 .overlapping {
     position: relative;
     bottom: 10rem;
@@ -123,6 +119,14 @@ body {
 
 .overlapping + .section > .title:first-child {
     margin-top: 0;
+}
+
+.showcase {
+    max-width: 1200px;
+    margin-top: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 5rem;
 }
 
 .sq-logo {
@@ -142,7 +146,7 @@ body {
     border-radius: 50%;
 }
 
-#header-avatar {
+#top-avatar {
     max-height: 200px;
     max-width: 200px;
     border-radius: 50%;
@@ -299,26 +303,17 @@ span > .button-svg {
     margin: 2em 0 2em 0;
 }
 
-#center-card {
-    border-right: 1px solid #ededed;
-    border-left: 1px solid #ededed;
-    height: 500px;
-}
-
 .meta-card {
     background-image: url('img/thissite.png');
-    background-color: #141c3a;
 }
 
 .lin-card {
     background-image: url('img/linuxterminal.png');
     background-position: right;
-    background-color: #141c3a;
 }
 
 .win-card {
     background-image: url('img/windowsterminal.png');
-    background-color: #141c3a;
     background-position: center;
 }
 
@@ -327,6 +322,12 @@ span > .button-svg {
 .win-card:hover {
     background-image: none;
     transition: 1s;
+}
+
+#center-card {
+    border-right: 1px solid #ededed;
+    border-left: 1px solid #ededed;
+    height: 510px;
 }
 
 /* Navbar */
@@ -350,7 +351,7 @@ span > .button-svg {
     right: 5%;
 }
 
-#navlinks > a {
+#navlinks a {
     display: inline-block;
     margin: 0 0.5em 0 0.5em;
 }
@@ -397,5 +398,5 @@ span > .button-svg {
     right: 0;
     margin: auto;
     border-radius: 15px;
-    box-shadow: 0px 1px 3px #141c3a;
+    box-shadow: 0px 1px 3px #222831;
 }
