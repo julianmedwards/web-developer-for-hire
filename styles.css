@@ -10,10 +10,17 @@
         9. Tables
 */
 
+:root {
+    --primary-color: #dd1c1a;
+    --primary-darkened: #bb0805;
+    --secondary-color: #222831;
+    --light-color: white;
+}
+
 /* Fonts & Text */
 
 body {
-    color: #222831;
+    color: var(--secondary-color);
 }
 
 * {
@@ -61,17 +68,17 @@ li {
 /* Colors */
 
 .primary-bg {
-    background-color: #dd1c1a;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--light-color);
 }
 
 .primary-txt {
-    color: #dd1c1a;
+    color: var(--primary-color);
 }
 
 .secondary-bg {
-    background-color: #222831;
-    color: white;
+    background-color: var(--secondary-color);
+    color: var(--light-color);
 }
 
 /* Spacing */
@@ -179,50 +186,50 @@ body {
 /* Links & Buttons */
 
 .link {
-    color: #dd1c1a;
+    color: var(--primary-color);
     text-decoration: none;
     font-weight: 400;
 }
 
 .link:hover {
-    color: #bb0805;
+    color: var(--primary-darkened);
 }
 
 .link-reverse {
-    color: #141c3a;
+    color: var(--secondary-color);
     text-decoration: none;
     font-weight: 400;
 }
 
 .link-reverse:hover {
-    color: #dd1c1a;
+    color: var(--primary-color);
     transition: 0.25s;
 }
 
 .button {
-    color: #dd1c1a;
+    color: var(--primary-color);
     text-decoration: none;
     font-size: 18px;
     padding: 0.5em 1em;
-    border: 2px solid #dd1c1a;
+    border: 2px solid var(--primary-color);
     border-radius: 25px;
 }
 
 .button:hover {
-    background-color: #dd1c1a;
-    border-color: #dd1c1a;
-    color: white;
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--light-color);
     transition: 0.25s;
 }
 
 .secondary-bttn {
     position: relative;
-    color: white;
+    color: var(--light-color);
 }
 
 .footer-bttn {
     display: inline-block;
-    color: white;
+    color: var(--light-color);
     padding: 10px;
     margin: auto 1rem;
     border: 2px solid darkgray;
@@ -230,9 +237,9 @@ body {
 }
 
 .footer-bttn:hover {
-    background-color: white;
-    color: #dd1c1a;
-    border-color: white;
+    background-color: var(--light-color);
+    color: var(--primary-color);
+    border-color: var(--light-color);
     transition: 0.25s;
 }
 
@@ -269,7 +276,7 @@ span > .button-svg {
 /* Cards */
 
 .card-bg {
-    background-color: white;
+    background-color: var(--light-color);
     border-radius: 16px;
     border: 1px solid #ededed;
     box-shadow: 0px 3px 2px #ededed;
@@ -295,7 +302,7 @@ span > .button-svg {
 }
 
 .project-txt {
-    color: white;
+    color: var(--light-color);
     margin: 2em 0 2em 0;
 }
 
@@ -370,7 +377,7 @@ span > .button-svg {
 
 .carousel-bttn {
     display: inline-block;
-    background-color: #dd1c1a;
+    background-color: var(--primary-color);
     height: 16px;
     width: 16px;
     margin: 2rem 0.5rem;
@@ -394,5 +401,5 @@ span > .button-svg {
     right: 0;
     margin: auto;
     border-radius: 15px;
-    box-shadow: 0px 1px 3px #222831;
+    box-shadow: 0px 1px 3px var(--secondary-color);
 }
